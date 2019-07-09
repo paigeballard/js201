@@ -10,6 +10,28 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+function tipAmount(amount, level) {
+    var levelType = {
+        good: 0.2,
+        fair: 0.15,
+        poor: 0.1
+    }
+    return amount * (levelType[level])
+}
+
+//function tipAmount(amount, level) {
+//if (level === "good") {
+  //  return amount * .2
+// } else  if (level ===  "fair") {
+  //  return amount *.15
+ //} else if (level === "poor") {
+   // return amount * .1
+ //}
+//}
+// example of if else 
+// example of objects
+
+
 //I'm adding a commit to push a commit to git just to practice
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,8 +42,19 @@
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
+function totalAmount(amount, level) {
+    return amount + tipAmount(amount, level)
+}
 
-
+function totalAmount(amount, level) {
+    var amountToTotal = {
+        good: 1.2,
+        fair: 1.15,
+        poor: 1.1
+    
+    }
+    return amount *amountToTotal[level]
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
@@ -31,3 +64,8 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount(amount, level, peeps) {
+    return totalAmount(amount, level) / peeps
+
+}

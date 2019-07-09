@@ -4,8 +4,27 @@
 // Examples:
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
-
-
+// function numberJoinerWhile (start, end) {
+//     let text = "";
+//     var i = start;
+//     while (i<end) {
+//         text += "_" + i;
+//         i++;
+//     } console.log(text);
+// }
+// numberJoinerWhile(1, 1);
+function numberJoinerWhile(start, end) {
+    let text = "";
+    var i = 0;
+    while (i == start || i < end) {
+        text += "_" + i;
+        i++;
+        // if (i === end) {
+        //     break;
+        // }
+    } console.log(text);
+} 
+numberJoinerWhile(0, 10);
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",

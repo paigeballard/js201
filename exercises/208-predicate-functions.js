@@ -22,7 +22,14 @@
 // isVowel({e: 'Elephant'}) --> false
 
 
+  function isVowel (char) {
+        if (typeof char !== "string") return false
+        if (char.length !== 1) return false
+        return "aeiou" .indexOf(char.toLowerCase()) !== -1
+  }
+  isVowel("a")
 
+  
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write two functions: "isEven" and "isOdd" that take a number argument and
 // return true or false if the number is even or odd, respectively.
@@ -37,6 +44,22 @@
 // isOdd('7') --> false
 // isOdd(3.14) --> false
 
+function isInteger (n) {
+    return typeof n === 'number' &&
+    n % 1 === 0 
+}
+
+function isEven (n) {
+    return isInteger(n) &&
+        n % 2 === 0
+}
+
+function isOdd (n) {
+    return isInteger(n) &&
+        n % 2 !== 0
+}
+console.log(3.14 % 2)
+console.log(4 % 2)
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,5 +74,72 @@
 // Examples:
 // isCapitalCity('Texas', 'Austin') --> true
 // isCapitalCity('Texas', 'Houston') --> false
+
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+let capitals = {
+    Alabama: 'Montgomery',
+    Montana: 'Helena',
+    Alaska:    'Juneau',    
+    Nebraska: 'Lincoln',
+    Arizona: 'Phoenix',    
+    Nevada:    'Carson City',
+    Arkansas: 'Little Rock',    
+    'New Hampshire': 'Concord',
+    California:    'Sacramento',    
+    'New Jersey': 'Trenton',
+    Colorado: 'Denver',    
+    'New Mexico': 'Santa Fe',
+    Connecticut: 'Hartford',    
+    'New York': 'Albany',
+    Delaware: 'Dover',    
+    'North Carolina': 'Raleigh',
+    Florida: 'Tallahassee',    
+    'North Dakota': 'Bismarck',
+    Georgia: 'Atlanta',    
+    Ohio: 'Columbus',
+    Hawaii:    'Honolulu',    
+    Oklahoma: 'Oklahoma City',
+    Idaho: 'Boise',    
+    Oregon:    'Salem',
+    Illinois: 'Springfield',    
+    Pennsylvania: 'Harrisburg',
+    Indiana: 'Indianapolis',    
+    'Rhode Island': 'Providence',
+    Iowa: 'Des Moines',    
+    'South Carolina': 'Columbia',
+    Kansas:    'Topeka',    
+    'South Dakota': 'Pierre',
+    Kentucky: 'Frankfort',    
+    Tennessee: 'Nashville',
+    Louisiana: 'Baton Rouge',
+    Texas: 'Austin',
+    Maine: 'Augusta',
+    Utah: 'Salt Lake City',
+    Maryland: 'Annapolis',    
+    Vermont: 'Montpelier',
+    Massachusetts: 'Boston',    
+    Virginia: 'Richmond',
+    Michigan: 'Lansing',    
+    Washington:    'Olympia',
+    Minnesota:    'St. Paul',    
+    'West Virginia': 'Charleston',
+    Mississippi: 'Jackson',    
+    Wisconsin: 'Madison',
+    Missouri: 'Jefferson City',    
+    Wyoming: 'Cheyenne'
+};
+    
+function isCapitalCity(state, city) {
+    console.log(state)
+    console.log(city)
+    console.log(capitals)
+    if (capitals[state] === city)
+    return true
+    else return false 
+    
+    
+}
+isCapitalCity("Texas", "Austin") 
+

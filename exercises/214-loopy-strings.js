@@ -7,7 +7,15 @@
 //
 // Example:
 // reverse("skoob") --> "books"
-
+function reverseString(str){ 
+    const arr = [... str] 
+    let reverse= ""; 
+    while(arr. length){ 
+      reverse = reverse + arr. pop() } 
+      return reverse }
+      
+  reverseString('skoob');
+  
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,7 +25,19 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-
+function findLongestWord(string) {
+    var str = string.split('');
+    var longest = 0;
+    var word = null;
+    for (var i = 0; i < str.length - 1; i++) {
+        if (longest < str[i].length) {
+            longest = str[i].length;
+            word = str[i];
+        }
+    }
+    return word;
+}
+findLongestWord('a book full of dogs');
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

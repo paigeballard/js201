@@ -9,3 +9,23 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+function fizzbuzz (a) {
+    console.log(a)
+    var acc = "";
+    for (let index = 1; index <= a; index++) {
+        if (index % 3 === 0 && index % 5 === 0) {
+            acc = acc + 'fizzbuzz';
+        } else if (index % 5 === 0) {
+            acc = acc + 'buzz';
+        } else if (index % 3 === 0) {
+            acc = acc + 'fizz';
+        } else {
+            acc = acc + ".";
+        }
+        
+    }
+
+    return acc;
+}
+var result = fizzbuzz(15);
+console.log(result);

@@ -1,0 +1,18 @@
+if (typeof char !== "string") return false
+  if (char.length !== 1) return false
+  return "aeiou" .indexOf(char.toLowerCase()) !== -1
+
+
+
+  const charNotInsidevowels = 'aeiou' .indexOf(char) 
+  const lowerCaseChar = char.toLowerCase()
+ return vowels.includes(lowerCaseChar)
+ \\\
+
+  if (typeof n !== 'number') return false 
+    return n % 2 !== 0
+
+    return (typeof char === 'string') &&
+        (char.length === 1) &&
+        ('aeiou'.indexOf(char.toLowerCase()))
+  }   
