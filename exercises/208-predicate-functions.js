@@ -61,6 +61,10 @@ function isOdd (n) {
 console.log(3.14 % 2)
 console.log(4 % 2)
 
+isEven(10);
+isOdd(9);
+
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name

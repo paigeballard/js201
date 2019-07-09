@@ -12,12 +12,14 @@ hello("Mustache");
 // Write a function "helloDefault" such that if no name is given it will return
 // 'Hello, world!'
 // Otherwise it behaves the same as the "hello" function.
-function helloDefault(name) {
-    let greeting = "Hello, ";
 
-    if (name === "") {
-        return "Hello, world!"
+function helloDefault(name) {
+    let greeting = 'Hello, ';
+    let noName = 'world';
+    if (name === '') {
+        return greeting + noName + '!';
     } else {
-        return greeting + name + "!";
+        return greeting + name + '!';
     }
 }
+helloDefault(' ');

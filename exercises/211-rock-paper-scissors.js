@@ -32,4 +32,5 @@ function rockPaperScissors(throw1, throw2) {
         return "player 1";
     }
     }
-}  rockPaperScissors("rock", "paper");
+} 
+rockPaperScissors("rock", "paper");

@@ -18,6 +18,7 @@ function tipAmount(amount, level) {
     }
     return amount * (levelType[level])
 }
+tipAmount(100, "good");
 
 //function tipAmount(amount, level) {
 //if (level === "good") {
@@ -42,9 +43,10 @@ function tipAmount(amount, level) {
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
-function totalAmount(amount, level) {
-    return amount + tipAmount(amount, level)
-}
+
+// function totalAmount(amount, level) {
+//     return amount + tipAmount(amount, level)
+// }
 
 function totalAmount(amount, level) {
     var amountToTotal = {
@@ -55,6 +57,8 @@ function totalAmount(amount, level) {
     }
     return amount *amountToTotal[level]
 }
+totalAmount(100, "good");
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
@@ -66,6 +70,11 @@ function totalAmount(amount, level) {
 // splitAmount(40, 'fair', 2) --> 23
 
 function splitAmount(amount, level, peeps) {
-    return totalAmount(amount, level) / peeps
-
+   var levelType = {
+       good: 1.2,
+       fair: 1.15,
+       poor: 1.1
+   }
+return amount *levelType[level] / peeps
 }
+splitAmount(100, "good", 2);

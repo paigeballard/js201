@@ -12,9 +12,9 @@ function reverseString(str){
     let reverse= ""; 
     while(arr. length){ 
       reverse = reverse + arr. pop() } 
-      return reverse }
-      
-  reverseString('skoob');
+      return reverse 
+}
+reverseString('skoob');
   
 
 
@@ -25,17 +25,16 @@ function reverseString(str){
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-function findLongestWord(string) {
-    var str = string.split('');
-    var longest = 0;
-    var word = null;
-    for (var i = 0; i < str.length - 1; i++) {
-        if (longest < str[i].length) {
-            longest = str[i].length;
-            word = str[i];
+function findLongestWord(str) {
+    var array1 = str.match(/\w[a-z]{0,}/gi);
+    var result = array1[0];
+
+    for(var x = 1; x < array1.length; x++) {
+        if(result.length < array1[x].length) {
+            result = array1[x];
         }
     }
-    return word;
+    return result;
 }
 findLongestWord('a book full of dogs');
 
@@ -48,8 +47,22 @@ findLongestWord('a book full of dogs');
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
+function nicer (sentence) {
+    let char = ' '
+    let banned = [heck, darn, dang, crappy]
+   let censor = (sentence) =>
+        sentence.split(' ').reduce((acc, word))
+        acc + ' ' + (banned.includes(word) + (' '))
 
+        let censored = censor(sentence).trim()
+}
+nicer('mom get the heck in here and bring me a darn sandwich.');
 
+function nicer(str) {
+    var str1 = str;
+    var banned = str1.slice('heck', 'darn', 'dang', 'crappy');
+    
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"
